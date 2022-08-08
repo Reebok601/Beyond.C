@@ -25,23 +25,26 @@ import {
   const Logo = styled.h1``;
   
   const Desc = styled.p`
-    margin: 20px 0px;
+    margin: 10px 0px;
   `;
   
   const SocialContainer = styled.div`
     display: flex;
+   
   `;
   
   const SocialIcon = styled.div`
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     color: white;
     background-color: #${(props) => props.color};
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-top: 20px;
+    
   `;
   
   const Center = styled.div`
@@ -90,24 +93,9 @@ import {
         <Left>
           <Logo>BEYOND.C</Logo>
           <Desc>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don’t look even slightly believable.
+            BEYOND.C online shopping application comprehensively contains all the tools that enable customers to buy fashaionable wearables and at the same time special wearables according to the current situtaion of outer world. We believe in giving our customers the best experience beyond their expectations. That's why you should call us Beyond clouds (BEYOND.C)
           </Desc>
-          <SocialContainer>
-            <SocialIcon color="3B5999">
-              <Facebook />
-            </SocialIcon>
-            <SocialIcon color="E4405F">
-              <Instagram />
-            </SocialIcon>
-            <SocialIcon color="55ACEE">
-              <Twitter />
-            </SocialIcon>
-            <SocialIcon color="E60023">
-              <Pinterest />
-            </SocialIcon>
-          </SocialContainer>
+         
         </Left>
         <Center>
           <Title>Useful Links</Title>
@@ -123,6 +111,20 @@ import {
             <ListItem>Wishlist</ListItem>
             <ListItem>Terms</ListItem>
           </List>
+          <SocialContainer>
+            <SocialIcon color="3B5999">
+              <Facebook />
+            </SocialIcon>
+            <SocialIcon color="E4405F">
+              <Instagram />
+            </SocialIcon>
+            <SocialIcon color="55ACEE">
+              <Twitter />
+            </SocialIcon>
+            <SocialIcon color="E60023">
+              <Pinterest />
+            </SocialIcon>
+          </SocialContainer>
         </Center>
         <Right>
           <Title>Contact</Title>
