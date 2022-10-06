@@ -1,9 +1,12 @@
 
 
-import { Search, ShoppingCart } from "@mui/icons-material";
+import {  Search,  ShoppingCartOutlined } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
+import { Badge } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -68,6 +71,11 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
+
+
+
+
   return (
     <Container>
       <Wrapper>
@@ -82,16 +90,27 @@ const Navbar = () => {
           <Logo>BEYOND.C</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <MenuItem>
-        
 
-          <ShoppingCart />
-        
-              
-            
+          <Link to = "/Register">
+          <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to = "/Login">
+          <MenuItem>SIGN IN</MenuItem>
+          </Link>
+
+
+          
+
+          <Link to="/cart">
+          <MenuItem>
+          <Badge badgeContent={quantity} color="primary" >
+
+          <ShoppingCartOutlined />
+          </Badge>
+      
           </MenuItem>
+          </Link>
+
         </Right>
       </Wrapper>
     </Container>
